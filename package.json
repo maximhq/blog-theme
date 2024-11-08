@@ -1,7 +1,7 @@
 {
-    "name": "headline",
-    "description": "A Ghost theme",
-    "version": "1.0.0",
+    "name": "maxim-headline",
+    "description": "A Ghost theme for maxim blog",
+    "version": "1.1.0",
     "private": true,
     "engines": {
         "ghost": ">=5.0.0"
