@@ -22,11 +22,6 @@
   font-family: Bricolage Grotesque, sans-serif;
 }
 
-html body header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
 
 .w-form-formrecaptcha {
   margin-bottom: 8px;
