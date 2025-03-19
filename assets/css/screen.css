@@ -354,6 +354,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .gh-article-image {
     grid-column: main-start / main-end;
     width: 100%;
+    border-radius: 10px;
 }
 
 .has-wide-image .gh-article-image {
