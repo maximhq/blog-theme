@@ -3,6 +3,7 @@
 <main class="gh-main gh-outer">
     <div class="gh-inner">
         <section class="gh-topic gh-topic-grid">
+            <div class="gh-topic-header" style="display: flex; flex-direction: row; height:20px !important;">
             <h2 class="gh-topic-name">
                 {{#match pagination.pages ">" 1}}
                     <a href="{{@site.url}}/page/2">Latest</a>
@@ -10,6 +11,13 @@
                     Latest
                 {{/match}}
             </h2>
+            <div class="gh-search-box">
+                <a href="https://www.getmaxim.ai/blog/#/search" class="gh-search-link">
+                    {{> "icons/search"}}
+                    <span class="gh-search-text">Search posts...</span>
+                </a>
+            </div>
+                </div>
 
             <div class="gh-topic-content">
                 {{#foreach posts limit="7"}}
@@ -65,3 +73,57 @@
         {{/if}}
     </div>
 </main>
+
+<style>
+    .gh-topic-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .gh-search-box {
+        flex-shrink: 0;
+        margin-top: -40px;
+    }
+
+    .gh-search-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+        border: 2px solid #e5e5e5;
+        border-radius: 8px;
+        background: transparent;
+        color: #666;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        width: 200px;
+        font-size: 13px;
+    }
+
+    .gh-search-link:hover {
+        border-color: #333;
+        color: #333;
+        background: rgba(0, 0, 0, 0.05);
+    }
+
+    .gh-search-link svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+    }
+
+    .gh-search-text {
+        white-space: nowrap;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .gh-topic-header {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+</style>
